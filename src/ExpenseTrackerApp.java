@@ -77,8 +77,13 @@ public class ExpenseTrackerApp {
             JOptionPane.YES_NO_OPTION,
             JOptionPane.QUESTION_MESSAGE);
         if (response == JOptionPane.YES_OPTION) {
-          // Remove the selected transaction
-          controller.removeSelectedTransaction(selectedRow);
+          try {
+            // Attempt to remove the selected transaction
+            controller.removeSelectedTransaction(selectedRow);
+          } catch (IllegalStateException exception) {
+            // Handle the case where no transactions could be removed
+            JOptionPane.showMessageDialog(view, "No transaction to remove: " + exception.getMessage());
+          }
         }
       } else {
         JOptionPane.showMessageDialog(view, "Please select a transaction to remove.");

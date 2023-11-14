@@ -86,8 +86,8 @@ public class ExpenseTrackerController {
 
       return true;
     } else {
-      // No transactions to undo
-      return false;
+      // Throw an exception if there are no transactions to undo
+      throw new IllegalStateException("Transaction list is empty, cannot undo.");
     }
   }
 
