@@ -76,8 +76,8 @@ public class TestExample {
         String category = "food";
         assertTrue(controller.addTransaction(amount, category));
 
-        // Trigger the button click to add the transaction
-
+        // Post-condition: List of transactions contains only
+        // the added transaction
         assertEquals(1, model.getTransactions().size());
 
         // Check the contents of the list
@@ -119,6 +119,29 @@ public class TestExample {
         assertEquals(0.00, totalCost, 0.01);
     }
 
+    // Case 1:Add Transaction
+    @Test
+    public void testAddTransaction2() {
+        // Pre-condition: List of transactions is empty
+        assertEquals(0, model.getTransactions().size());
+
+        // Perform the action: Add a transaction
+        double amount = 50.0;
+        String category = "food";
+        assertTrue(controller.addTransaction(amount, category));
+
+        // Trigger the button click to add the transaction
+        assertEquals(1, model.getTransactions().size());
+
+        // Check the contents of the list
+        Transaction firstTransaction = model.getTransactions().get(0);
+        checkTransaction(amount, category, firstTransaction);
+
+        // Check the total amount
+        assertEquals(amount, getTotalCost(), 0.01);
+    }
+
+    // Case 2:Invalid Input Handling
     @Test
     public void testInvalidInputHandling() {
         // Pre-condition: List of transactions is empty
@@ -136,6 +159,7 @@ public class TestExample {
         assertEquals(0.0, getTotalCost(), 0.01);
     }
 
+    // Case 3:Filter by Amount
     @Test
     public void testFilterByAmount() {
         // Pre-condition: List of transactions with different amounts
@@ -158,6 +182,7 @@ public class TestExample {
         }
     }
 
+    // Case 4:Filter by Category
     @Test
     public void testFilterByCategory() {
         // Pre-condition: List of transactions with different categories
@@ -179,6 +204,7 @@ public class TestExample {
         }
     }
 
+    // Case 5:Undo Disallowed
     @Test
     public void testRemoveDisallowed() {
         // Pre-condition: List of transactions is empty
@@ -197,6 +223,7 @@ public class TestExample {
         assertEquals(0.0, getTotalCost(), 0.01);
     }
 
+    // Case 6:Undo Allowed
     @Test
     public void testRemoveAllowed() {
         // Pre-condition: List of transactions is empty
