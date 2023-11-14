@@ -8,6 +8,12 @@ import static org.junit.Assert.fail;
 
 import java.util.Date;
 import java.util.List;
+
+import javax.swing.JFormattedTextField;
+import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
+
+import java.awt.event.ActionListener;
 import java.text.ParseException;
 
 import org.junit.Before;
@@ -70,8 +76,8 @@ public class TestExample {
         String category = "food";
         assertTrue(controller.addTransaction(amount, category));
 
-        // Post-condition: List of transactions contains only
-        // the added transaction
+        // Trigger the button click to add the transaction
+
         assertEquals(1, model.getTransactions().size());
 
         // Check the contents of the list
