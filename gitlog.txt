@@ -1,0 +1,56 @@
+vagisudar@Sudharshans-MacBook-Air expense_tracker % git log
+commit 88c4e993ea4cbfbaf049f0567d49cbce6b6d4265 (HEAD -> main, origin/main)
+Author: sudharshan1234 <sudarchakra2000@gmail.com>
+Date:   Mon Nov 13 21:34:05 2023 -0500
+
+    added jdoc to gitignore
+
+commit 603b65c179b09caa1f959b659a195b2d381402c2
+Author: sudharshan1234 <sudarchakra2000@gmail.com>
+Date:   Mon Nov 13 21:31:36 2023 -0500
+
+    Final commit
+
+commit cb7682c7c1a27e07bccfdb58b9ba3d6619f5b436
+Merge: 1769c07 3495466
+Author: SmruthiSathyamoorthy <smruthi.sathyamoorthy@gmail.com>
+Date:   Mon Nov 13 21:18:09 2023 -0500
+
+    merging readme
+    ierge branch 'main' of https://github.com/sudharshan1234/expense_tracker_hw3
+
+commit 1769c07e1674dd005ee61c75efd2acacf20f69ef
+Author: SmruthiSathyamoorthy <smruthi.sathyamoorthy@gmail.com>
+Date:   Mon Nov 13 21:16:01 2023 -0500
+
+    Changed AddTransaction Test
+
+commit 3495466997dd17cba9e5ea599259cbcaa8a2ee5f
+Author: sudharshan1234 <sudarchakra2000@gmail.com>
+Date:   Mon Nov 13 20:55:35 2023 -0500
+
+    updated readme
+
+commit b6a262ba788986861d20e7250829c8978c01cd20
+Author: sudharshan1234 <sudarchakra2000@gmail.com>
+Date:   Mon Nov 13 19:21:20 2023 -0500
+
+    changed empty transactions to throw exception
+
+commit 03ba11fd7cf012007751507c34347ab1d0f09fbb
+Author: SmruthiSathyamoorthy <smruthi.sathyamoorthy@gmail.com>
+Date:   Thu Nov 9 11:48:56 2023 -0500
+
+    Added 6 test cases to test various functionalities
+
+commit 95e215eab34d441e6816283139e49d96c6075309
+Author: sudharshan1234 <sudarchakra2000@gmail.com>
+Date:   Thu Nov 9 00:10:16 2023 -0500
+
+    added undo functionality for selected transaction
+
+commit fcbacc5ce63dfd7e0f0b42b739d03a457c47da78
+Author: sudharshan1234 <sudarchakra2000@gmail.com>
+Date:   Tue Nov 7 18:03:59 2023 -0500
+
+    initial commit
